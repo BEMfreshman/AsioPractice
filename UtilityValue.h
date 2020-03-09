@@ -1,0 +1,10 @@
+//
+// Created by wenluyang on 2020/3/9.
+//
+
+#ifndef ASIOPRACTICE_UTILITYVALUE_H
+#define ASIOPRACTICE_UTILITYVALUE_H
+
+#define MAXLINE 1024
+
+#endif //ASIOPRACTICE_UTILITYVALUE_H
