@@ -16,7 +16,7 @@ class Client {
 public:
     Client(boost::asio::io_context& io,
             const string& hostip,
-            short port);
+            const string& port);
     void EchoClient();
 
 private:

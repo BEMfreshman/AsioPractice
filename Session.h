@@ -19,13 +19,14 @@ public:
 
     Session(tcp::socket socket);
 
-    void EchoMode();
+    void run();
+private:
 
+    void EchoMode();
     void DoReadAndSend();
 
-private:
     string getClientIP();
-    short  getClientPort();
+    size_t  getClientPort();
 
 private:
     tcp::socket socket;

@@ -11,8 +11,7 @@ using namespace boost;
 
 DEFINE_string(type,"Server,Client","Type");
 DEFINE_string(ip,"","remote host ip");
-DECLARE_int32(port);
-DEFINE_int32(port,8000,"listen port");
+DEFINE_string(port,"9000","listen port");
 
 int main(int argc, char* argv[])
 {
@@ -31,6 +30,7 @@ int main(int argc, char* argv[])
             exit(0);
         }
         Client client(io,FLAGS_ip,FLAGS_port);
+        client.EchoClient();
 
     }
     else {
