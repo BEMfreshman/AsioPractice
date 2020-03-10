@@ -16,15 +16,20 @@ using boost::asio::ip::tcp;
 class Server {
 
 public:
+    Server(boost::asio::io_context& io);
     Server(boost::asio::io_context& io,
             const string& hostip,
             short port);
     Server(boost::asio::io_context& io,
             short port);
+
+    void build_and_bindep(const string& hostip, short port);
+    void start_listen();
+
     ~Server();
 
 private:
-    void start_listen();
+
 
 private:
     tcp::endpoint ep;
