@@ -26,7 +26,7 @@ public:
     void build_and_bindep(const string& hostip, short port);
     void start_listen();
 
-    ~Server();
+    ~Server() {};
 
 private:
 

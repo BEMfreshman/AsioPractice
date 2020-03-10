@@ -9,11 +9,12 @@
 
 Client::Client(boost::asio::io_context& io,
                 const string& hostip,
-                short port) : socket(io),
-                hostep(boost::asio::ip::address::from_string(hostip),port)
+                short port) : socket(io)
+
 {
+    hostep = tcp::endpoint(boost::asio::ip::address::from_string(hostip),port);
     try{
-        connect(socket,hostep);
+        socket.connect(hostep);
     }
     catch (std::exception& e) {
         throw e;

@@ -20,9 +20,9 @@ int main(int argc, char* argv[])
     google::ParseCommandLineFlags(&argc,&argv,true);
     if (FLAGS_type == "Server") {
         // start server
-        Server ser(io);
-        ser.build_and_bindep(FLAGS_ip, FLAGS_port);
-        ser.start_listen();
+        Server server(io);
+        server.build_and_bindep(FLAGS_ip, FLAGS_port);
+        server.start_listen();
     }
     else if (FLAGS_type == "Client") {
         // start Client
